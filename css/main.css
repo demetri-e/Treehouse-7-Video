@@ -1,0 +1,207 @@
+
+/* This page assignment has been tested in Chrome, Safari, Firefox, and Opera browsers.*/
+
+
+.wrap {
+	margin: 0 auto;
+	margin-top: .5em;
+	text-align: center;
+	max-width: 300px;
+}
+
+.text {
+	text-align: left;
+	padding: .5em;
+	max-width: 800px; 
+	margin: 0 auto;
+}
+
+p {
+	font-family: Helvetica, sans-serif;
+	font-weight: lighter;
+	font-size: .938em;
+	padding: .5em;
+	line-height: 1.65em;
+}
+
+.word:hover {
+    color: orange;
+    cursor: pointer;
+}
+
+.word.selected {
+	color: orange;
+    cursor: pointer;
+}
+
+/* Video Player */
+
+.video-container {
+	width: 300px;
+	height: 168px;
+	overflow: hidden;
+	display: inline-block;
+	user-select: none; 
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+}
+
+	video {
+		width: 100%;
+		height: 100%;
+	}
+
+.controls-container {
+	width: 100%;
+	background: rgb(46,46,46);
+	background: rgba(0,0,0,0.6);
+	position: relative; 
+	bottom: 22px;
+	transition: .5s ease-in-out;
+}
+
+.video-container:hover .controls-container {
+	bottom: 58px;
+}
+
+.time-field {
+	color: #fff;
+	font-family: 'Helvetica', 'Arial', sans-serif;
+}
+
+.pbar-container {
+	height: 5px; 
+	background-color: rgba(110,110,110,1);
+}
+
+	.pbar {
+		height: 5px; 
+		background-color: orange;
+	}
+
+.buttons-container {
+	height: 40px;
+	padding-top: .5em;
+}
+
+	.buttons-container img,
+	.buttons-container div {
+		display: inline-block;
+		
+	}
+
+	.play-button {
+		position: relative;
+		top: 8px;
+		float: left;
+		padding-left: 1em;
+		width: 22px;
+		height: 22px;
+	}
+
+	.time-field {
+		float: left;
+		position: relative;
+		left: 2em; 
+		top: 14px;
+		font-size: 14px;
+	}
+
+	.right-controls {
+		float: right;
+		position: relative; 
+		top: 7px;
+	}
+
+	.sound-button {
+		padding-right: .5em;
+	}
+
+	.sbar-container {
+		height: 100px; 
+		width: 20px;
+		background-color: black;
+		position: relative; 
+		right: 2em;
+		bottom: 6em;
+		opacity: 0;
+		transition: .5s;
+	} 
+	
+
+	.fullscreen-button {
+		padding-right: 1em;
+	}
+
+	.pbar-container,
+	.pbar,
+	.sbar,
+	.buttons-container img {
+		cursor: pointer;
+	}
+
+/* Media Queries*/
+
+@media screen and (min-width: 480px){
+
+	.wrap {
+		max-width: 480px;
+		margin: 0 auto;
+		padding-top: 1em;
+	}
+
+	.video-container {
+		width: 480px;
+		height: 270px;
+	}
+}
+
+@media screen and (min-width: 720px) {
+
+	.wrap {
+		max-width: 720px;
+	}
+
+	.video-container {
+		width: 720px;
+		height: 410px;
+	}
+
+}
+
+@media screen and (min-width: 980px) { 
+
+	.wrap {
+		max-width: 980px;
+		margin: 0 auto;
+	}
+
+	.video-container {
+		width: 980px;
+		height: 554px;
+	}
+
+	.controls-container {
+		max-width: 980px;
+	}
+
+	.text {
+		margin-top: 1em;
+	}
+ }
+
+ @media screen and (min-width: 1600px) {
+ 	.wrap {
+ 		max-width: 1120px;
+ 	}
+
+ 	.video-container {
+		width: 1120px;
+		height: 630px;
+	}
+
+ 	.controls-container {
+ 		max-width: 1280px;
+ 	}
+ }
